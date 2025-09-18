@@ -10,18 +10,18 @@ The goal is to combine the power of the Docker Engine API with a clean and intui
 
 ### Backend
 
-- [] Create a virtual environment, with requirements.txt in order to allow replication.
-- [] Create a backend using Python + FastAPI.
-- [] Endpoint /containers.
-- [] Endpoint stats.
-- [] Endpoint logs.
-- [] Swagger documentation.
+- [ ] Create a virtual environment, with requirements.txt in order to allow replication.
+- [ ] Create a backend using Python + FastAPI.
+- [ ] Endpoint /containers.
+- [ ] Endpoint stats.
+- [ ] Endpoint logs.
+- [ ] Swagger documentation.
 
 ### Frontend
 
-- [] Basic Frontend with React and Tailwind
-- [] Home page with container table.
-- [] stats graphics.
+- [ ] Basic Frontend with React and Tailwind
+- [ ] Home page with container table.
+- [ ] stats graphics.
 
 ### Others
 
