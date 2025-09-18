@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 import docker
 
+from services.getters import get_container_by_id
+
 app = FastAPI()
 docker_cli = docker.from_env()
 
@@ -21,3 +23,9 @@ async def get_containers():
         container_list.append(container_info)
     
     return {"containers": container_list}
+
+@app.post("/containers/{container_id}/restart")
+async def restart_container_from_id(container_id: str):
+    container = await get_container_by_id(container_id)
+    container.restart()
+    return {"message": f"Container {container_id} restarted successfully"}
