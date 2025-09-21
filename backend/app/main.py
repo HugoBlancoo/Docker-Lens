@@ -40,6 +40,14 @@ async def get_stats(container_id: str):
     except (docker.errors.APIError):
         return{"Internal Error"}
 
+@app.get("/containers/{container_id}/logs")
+async def get_logs(container_id: str):
+    try:
+        container = await get_container_by_id(container_id)
+        return container.logs()
+    except (docker.errors.APIError):
+        return{"Internal Error"}
+
 @app.post("/containers/{container_id}/restart")
 async def restart_container_from_id(container_id: str):
     container = await get_container_by_id(container_id)
